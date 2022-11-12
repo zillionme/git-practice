@@ -30,9 +30,9 @@ public class Model {
 
     public static List<Integer> stringToList(String input) {
         return input.chars()
-            .map(i -> i - '0')
-            .boxed()
-            .collect(Collectors.toList());
+                .map(i -> i - '0')
+                .boxed()
+                .collect(Collectors.toList());
     }
 }
 }
