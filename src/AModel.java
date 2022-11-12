@@ -2,7 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Model {
+public class AModel {
+
     public static List<Integer> createComputerNumber() {
         List<Integer> computerNumber = new ArrayList<>();
 
@@ -30,9 +31,9 @@ public class Model {
 
     public static List<Integer> stringToList(String input) {
         return input.chars()
-                .map(i -> i - '0')
-                .boxed()
-                .collect(Collectors.toList());
+            .map(i -> i - '0')
+            .boxed()
+            .collect(Collectors.toList());
     }
 }
 }

@@ -3,7 +3,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Controller {
+public class AController {
+
     private List<Integer> computerNumber;
     private boolean isPlaying = true;
 
@@ -31,7 +32,8 @@ public class Controller {
         } while (isPlaying);
     }
 
-    public Map<String, Integer> checkAnswer(List<Integer> computerNumber, List<Integer> playerNumber) {
+    public Map<String, Integer> checkAnswer(List<Integer> computerNumber,
+        List<Integer> playerNumber) {
         Map<String, Integer> resultMap = new HashMap<>();
 
         for (int i = 0; i < DIGITS; i++) {
@@ -49,7 +51,8 @@ public class Controller {
     }
 
     //볼인지 스트라이크인지 확인하기
-    public void checkBallOrStrike(Integer computerNum, Integer playerNum, Map<String, Integer> resultMap) {
+    public void checkBallOrStrike(Integer computerNum, Integer playerNum,
+        Map<String, Integer> resultMap) {
 
         if (computerNum.equals(playerNum)) {
             int oldValue = resultMap.getOrDefault(STRIKE, 0);
